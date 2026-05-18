@@ -5,15 +5,12 @@ import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from "@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay";
 import HeroSplitDoubleCarousel from "@/components/sections/hero/HeroSplitDoubleCarousel";
 import FeatureBento from "@/components/sections/feature/FeatureBento";
-import FeatureCardTwentySix from "@/components/sections/feature/FeatureCardTwentySix";
-import FeatureCardSixteen from "@/components/sections/feature/FeatureCardSixteen";
 import MetricCardSeven from "@/components/sections/metrics/MetricCardSeven";
-import TeamCardFive from "@/components/sections/team/TeamCardFive";
+import TestimonialCardTen from "@/components/sections/testimonial/TestimonialCardTen";
 import FaqSplitMedia from "@/components/sections/faq/FaqSplitMedia";
 import ContactCenter from "@/components/sections/contact/ContactCenter";
 import FooterLogoReveal from "@/components/sections/footer/FooterLogoReveal";
-import TestimonialCardTen from "@/components/sections/testimonial/TestimonialCardTen";
-import { Sparkles, Search, ArrowUpRight, Lock, Monitor, Shield, Zap, Puzzle, TrendingUp } from "lucide-react";
+import { Sparkles, Search } from "lucide-react";
 
 export default function WebAgency2Page() {
   return (
@@ -25,21 +22,23 @@ export default function WebAgency2Page() {
       sizing="medium"
       background="none"
       cardStyle="glass-elevated"
-      primaryButtonStyle="metallic"
+      primaryButtonStyle="gradient"
       secondaryButtonStyle="glass"
       headingFontWeight="medium"
     >
       <ReactLenis root>
-        <NavbarLayoutFloatingOverlay
-          brandName="Webild"
-          navItems={[
-            { name: "Work", id: "work" },
-            { name: "Services", id: "services" },
-            { name: "About", id: "about" },
-            { name: "Contact", id: "contact" },
-          ]}
-          button={{ text: "Get Started", href: "#contact" }}
-        />
+        <div id="nav" data-section="nav">
+          <NavbarLayoutFloatingOverlay
+            brandName="Webild"
+            navItems={[
+              { name: "Work", id: "work" },
+              { name: "Services", id: "services" },
+              { name: "About", id: "about" },
+              { name: "Contact", id: "contact" },
+            ]}
+            button={{ text: "Get Started", href: "#contact" }}
+          />
+        </div>
         <HeroSplitDoubleCarousel
           title="We Build Digital Experiences"
           description="Transform your brand with cutting-edge web design and development. We craft stunning websites that convert visitors into customers."
@@ -73,8 +72,16 @@ export default function WebAgency2Page() {
           animationType="slide-up"
           features={[
             { title: "SEO", description: "High-ranking strategies.", bentoComponent: "marquee", centerIcon: Search, variant: "text", texts: ["Keywords", "Backlinks", "Analytics"] },
-            { title: "Web Development", description: "High performance code.", bentoComponent: "media-stack", items: [{ imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-1.webp" }] },
-            { title: "Branding", description: "Memorable identity.", bentoComponent: "media-stack", items: [{ imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp" }] },
+            { title: "Web Development", description: "High performance code.", bentoComponent: "media-stack", items: [
+                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-1.webp" },
+                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-2.webp" },
+                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-3.webp" }
+            ] },
+            { title: "Branding", description: "Memorable identity.", bentoComponent: "media-stack", items: [
+                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp" },
+                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp" },
+                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp" }
+            ] },
           ]}
         />
         <MetricCardSeven
@@ -115,6 +122,7 @@ export default function WebAgency2Page() {
           description="Ready to build something great?"
           tag="Contact"
           background={{ variant: "gradient-bars" }}
+          useInvertedBackground={false}
         />
         <FooterLogoReveal
           logoText="Webild"
