@@ -4,14 +4,14 @@ import ReactLenis from "lenis/react";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from "@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay";
 import HeroSplitDoubleCarousel from "@/components/sections/hero/HeroSplitDoubleCarousel";
-import FeatureCardTwentySeven from "@/components/sections/feature/FeatureCardTwentySeven";
-import MetricCardSeven from "@/components/sections/metrics/MetricCardSeven";
-import TeamCardSix from "@/components/sections/team/TeamCardSix";
-import TestimonialCardTen from "@/components/sections/testimonial/TestimonialCardTen";
-import FaqSplitMedia from "@/components/sections/faq/FaqSplitMedia";
-import ContactCenter from "@/components/sections/contact/ContactCenter";
-import FooterLogoReveal from "@/components/sections/footer/FooterLogoReveal";
-import { Sparkles } from "lucide-react";
+import FeatureBento from "@/components/sections/feature/FeatureBento";
+import MetricCardFourteen from "@/components/sections/metrics/MetricCardFourteen";
+import TeamCardTwo from "@/components/sections/team/TeamCardTwo";
+import TestimonialCardTwo from "@/components/sections/testimonial/TestimonialCardTwo";
+import FaqBase from "@/components/sections/faq/FaqBase";
+import ContactText from "@/components/sections/contact/ContactText";
+import FooterCard from "@/components/sections/footer/FooterCard";
+import { Sparkles, Shield, Zap, BarChart, Users, Star } from "lucide-react";
 
 export default function WebAgency2Page() {
   return (
@@ -65,75 +65,74 @@ export default function WebAgency2Page() {
           ]}
           carouselItemClassName="!aspect-[4/5]"
         />
-        <FeatureCardTwentySeven
+        <FeatureBento
           title="Our Specialized Services"
           description="We provide tailored digital solutions designed to accelerate growth for your specific market."
           textboxLayout="default"
           animationType="slide-up"
+          useInvertedBackground={false}
           features={[
-            { id: "1", title: "Strategic Web Design", descriptions: ["High-conversion layouts", "Custom brand identity"], imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-1.webp" },
-            { id: "2", title: "Performance Development", descriptions: ["Lightning fast load times", "SEO optimized codebase"], imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-2.webp" },
-            { id: "3", title: "Digital Brand Strategy", descriptions: ["Market positioning", "Audience engagement tactics"], imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-3.webp" },
+            { title: "Strategic Web Design", description: "High-conversion layouts, Custom brand identity", bentoComponent: "reveal-icon", icon: Sparkles },
+            { title: "Performance Development", description: "Lightning fast load times, SEO optimized codebase", bentoComponent: "reveal-icon", icon: Zap },
+            { title: "Digital Brand Strategy", description: "Market positioning, Audience engagement tactics", bentoComponent: "reveal-icon", icon: Shield },
           ]}
         />
-        <MetricCardSeven
+        <MetricCardFourteen
           title="Core Metrics"
-          description="Results that define our excellence."
-          textboxLayout="default"
+          tag="Results"
+          metricsAnimation="slide-up"
           useInvertedBackground={true}
-          animationType="slide-up"
           metrics={[
-            { id: "1", value: "100+", title: "Projects", items: ["Across global industries", "High client retention"] },
-            { id: "2", value: "99%", title: "Satisfaction", items: ["Client-first approach", "Proven track record"] },
-            { id: "3", value: "8+", title: "Years", items: ["Crafting experiences", "Expert team"] },
+            { id: "1", value: "100+", description: "Projects completed across global industries" },
+            { id: "2", value: "99%", description: "Satisfaction rate with a client-first approach" },
+            { id: "3", value: "8+", description: "Years of expertise in crafting experiences" },
           ]}
         />
-        <TeamCardSix
-          id="work"
+        <TeamCardTwo
           title="Portfolio: Industry Focus"
           description="Showcasing our work across key local industries."
           textboxLayout="default"
           animationType="slide-up"
           gridVariant="three-columns-all-equal-width"
+          useInvertedBackground={false}
           members={[
-            { id: "1", name: "Real Estate Portal", role: "Property Tech Solutions" },
-            { id: "2", name: "E-Commerce Hub", role: "Retail & Logistics" },
-            { id: "3", name: "Health App Interface", role: "Healthcare Services" },
+            { id: "1", name: "Real Estate Portal", role: "Property Tech", description: "Comprehensive portal solution." },
+            { id: "2", name: "E-Commerce Hub", role: "Retail", description: "Scalable retail platform." },
+            { id: "3", name: "Health App", role: "Healthcare", description: "Patient-focused interface." },
           ]}
         />
-        <TestimonialCardTen
+        <TestimonialCardTwo
           title="Client Feedback"
           description="What our partners say about us."
           textboxLayout="default"
-          useInvertedBackground={false}
+          animationType="slide-up"
+          useInvertedBackground={true}
           testimonials={[
-            { id: "1", title: "Exceptional Results", quote: "Decka Agency transformed our entire digital infrastructure.", name: "Sarah J.", role: "Founder" },
-            { id: "2", title: "Great Partnership", quote: "Professional, fast, and highly creative.", name: "Michael T.", role: "CEO" },
+            { id: "1", name: "Sarah J.", role: "Founder", testimonial: "Decka Agency transformed our entire digital infrastructure.", icon: Star },
+            { id: "2", name: "Michael T.", role: "CEO", testimonial: "Professional, fast, and highly creative.", icon: Star },
           ]}
         />
-        <FaqSplitMedia
+        <FaqBase
           title="Common Questions"
           description="Everything you need to know about decka.agency."
           textboxLayout="default"
-          useInvertedBackground={true}
           faqsAnimation="slide-up"
+          useInvertedBackground={false}
           faqs={[
             { id: "1", title: "How do we get started?", content: "Fill out our contact form and we'll reach out within 24 hours." },
             { id: "2", title: "What is your process?", content: "We follow a streamlined discovery and design process." },
           ]}
         />
-        <ContactCenter
-          id="contact"
-          title="Let's Collaborate"
-          description="Ready to build something great at decka.agency?"
-          tag="Contact"
-          background={{ variant: "gradient-bars" }}
-          useInvertedBackground={false}
-        />
-        <FooterLogoReveal
+        <div id="contact" data-section="contact">
+          <ContactText
+            text="Ready to build something great at decka.agency?"
+            background={{ variant: "gradient-bars" }}
+            useInvertedBackground={false}
+          />
+        </div>
+        <FooterCard
           logoText="Decka Agency"
-          leftLink={{ text: "Privacy Policy", href: "/privacy" }}
-          rightLink={{ text: "Terms of Service", href: "/terms" }}
+          copyrightText="© 2025 | Decka Agency"
         />
       </ReactLenis>
     </ThemeProvider>
