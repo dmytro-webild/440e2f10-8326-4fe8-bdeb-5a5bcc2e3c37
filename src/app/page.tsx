@@ -11,7 +11,7 @@ import TestimonialCardTwo from "@/components/sections/testimonial/TestimonialCar
 import FaqBase from "@/components/sections/faq/FaqBase";
 import ContactText from "@/components/sections/contact/ContactText";
 import FooterCard from "@/components/sections/footer/FooterCard";
-import { Sparkles, Shield, Zap, BarChart, Users, Star } from "lucide-react";
+import { Sparkles, Shield, Zap, Star } from "lucide-react";
 
 export default function WebAgency2Page() {
   return (
@@ -32,7 +32,6 @@ export default function WebAgency2Page() {
           <NavbarLayoutFloatingOverlay
             brandName="Decka Agency"
             navItems={[
-              { name: "Work", id: "work" },
               { name: "Services", id: "services" },
               { name: "About", id: "about" },
               { name: "Contact", id: "contact" },
@@ -49,7 +48,6 @@ export default function WebAgency2Page() {
           background={{ variant: "canvas-reveal" }}
           buttons={[
             { text: "Start Project", href: "#contact" },
-            { text: "View Work", href: "#work" },
           ]}
           buttonAnimation="slide-up"
           carouselPosition="right"
@@ -86,19 +84,6 @@ export default function WebAgency2Page() {
             { id: "1", value: "100+", description: "Projects completed across global industries" },
             { id: "2", value: "99%", description: "Satisfaction rate with a client-first approach" },
             { id: "3", value: "8+", description: "Years of expertise in crafting experiences" },
-          ]}
-        />
-        <TeamCardTwo
-          title="Portfolio: Industry Focus"
-          description="Showcasing our work across key local industries."
-          textboxLayout="default"
-          animationType="slide-up"
-          gridVariant="three-columns-all-equal-width"
-          useInvertedBackground={false}
-          members={[
-            { id: "1", name: "Real Estate Portal", role: "Property Tech", description: "Comprehensive portal solution." },
-            { id: "2", name: "E-Commerce Hub", role: "Retail", description: "Scalable retail platform." },
-            { id: "3", name: "Health App", role: "Healthcare", description: "Patient-focused interface." },
           ]}
         />
         <TestimonialCardTwo
