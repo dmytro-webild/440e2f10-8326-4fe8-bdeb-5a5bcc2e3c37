@@ -4,13 +4,14 @@ import ReactLenis from "lenis/react";
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingOverlay from "@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay";
 import HeroSplitDoubleCarousel from "@/components/sections/hero/HeroSplitDoubleCarousel";
-import FeatureBento from "@/components/sections/feature/FeatureBento";
+import FeatureCardTwentySeven from "@/components/sections/feature/FeatureCardTwentySeven";
 import MetricCardSeven from "@/components/sections/metrics/MetricCardSeven";
+import TeamCardSix from "@/components/sections/team/TeamCardSix";
 import TestimonialCardTen from "@/components/sections/testimonial/TestimonialCardTen";
 import FaqSplitMedia from "@/components/sections/faq/FaqSplitMedia";
 import ContactCenter from "@/components/sections/contact/ContactCenter";
 import FooterLogoReveal from "@/components/sections/footer/FooterLogoReveal";
-import { Sparkles, Search } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export default function WebAgency2Page() {
   return (
@@ -29,7 +30,7 @@ export default function WebAgency2Page() {
       <ReactLenis root>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingOverlay
-            brandName="Webild"
+            brandName="Decka Agency"
             navItems={[
               { name: "Work", id: "work" },
               { name: "Services", id: "services" },
@@ -40,8 +41,8 @@ export default function WebAgency2Page() {
           />
         </div>
         <HeroSplitDoubleCarousel
-          title="We Build Digital Experiences"
-          description="Transform your brand with cutting-edge web design and development. We craft stunning websites that convert visitors into customers."
+          title="Decka: Digital Strategy & Development"
+          description="Transform your brand with cutting-edge web design and development. We craft stunning websites that convert visitors into customers for decka.agency."
           tag="Award-Winning Agency"
           tagIcon={Sparkles}
           tagAnimation="slide-up"
@@ -64,24 +65,15 @@ export default function WebAgency2Page() {
           ]}
           carouselItemClassName="!aspect-[4/5]"
         />
-        <FeatureBento
-          title="Our Services"
-          description="We offer a full suite of digital services to help your brand stand out online."
+        <FeatureCardTwentySeven
+          title="Our Specialized Services"
+          description="We provide tailored digital solutions designed to accelerate growth for your specific market."
           textboxLayout="default"
-          useInvertedBackground={false}
           animationType="slide-up"
           features={[
-            { title: "SEO", description: "High-ranking strategies.", bentoComponent: "marquee", centerIcon: Search, variant: "text", texts: ["Keywords", "Backlinks", "Analytics"] },
-            { title: "Web Development", description: "High performance code.", bentoComponent: "media-stack", items: [
-                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-1.webp" },
-                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-2.webp" },
-                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-3.webp" }
-            ] },
-            { title: "Branding", description: "Memorable identity.", bentoComponent: "media-stack", items: [
-                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=2" },
-                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=2" },
-                { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp?_wi=2" }
-            ] },
+            { id: "1", title: "Strategic Web Design", descriptions: ["High-conversion layouts", "Custom brand identity"], imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-1.webp" },
+            { id: "2", title: "Performance Development", descriptions: ["Lightning fast load times", "SEO optimized codebase"], imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-2.webp" },
+            { id: "3", title: "Digital Brand Strategy", descriptions: ["Market positioning", "Audience engagement tactics"], imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/dev-3.webp" },
           ]}
         />
         <MetricCardSeven
@@ -96,19 +88,32 @@ export default function WebAgency2Page() {
             { id: "3", value: "8+", title: "Years", items: ["Crafting experiences", "Expert team"] },
           ]}
         />
+        <TeamCardSix
+          id="work"
+          title="Portfolio: Industry Focus"
+          description="Showcasing our work across key local industries."
+          textboxLayout="default"
+          animationType="slide-up"
+          gridVariant="three-columns-all-equal-width"
+          members={[
+            { id: "1", name: "Real Estate Portal", role: "Property Tech Solutions" },
+            { id: "2", name: "E-Commerce Hub", role: "Retail & Logistics" },
+            { id: "3", name: "Health App Interface", role: "Healthcare Services" },
+          ]}
+        />
         <TestimonialCardTen
           title="Client Feedback"
           description="What our partners say about us."
           textboxLayout="default"
           useInvertedBackground={false}
           testimonials={[
-            { id: "1", title: "Exceptional Results", quote: "Webild transformed our entire digital infrastructure.", name: "Sarah J.", role: "Founder" },
+            { id: "1", title: "Exceptional Results", quote: "Decka Agency transformed our entire digital infrastructure.", name: "Sarah J.", role: "Founder" },
             { id: "2", title: "Great Partnership", quote: "Professional, fast, and highly creative.", name: "Michael T.", role: "CEO" },
           ]}
         />
         <FaqSplitMedia
           title="Common Questions"
-          description="Everything you need to know."
+          description="Everything you need to know about decka.agency."
           textboxLayout="default"
           useInvertedBackground={true}
           faqsAnimation="slide-up"
@@ -118,14 +123,15 @@ export default function WebAgency2Page() {
           ]}
         />
         <ContactCenter
+          id="contact"
           title="Let's Collaborate"
-          description="Ready to build something great?"
+          description="Ready to build something great at decka.agency?"
           tag="Contact"
           background={{ variant: "gradient-bars" }}
           useInvertedBackground={false}
         />
         <FooterLogoReveal
-          logoText="Webild"
+          logoText="Decka Agency"
           leftLink={{ text: "Privacy Policy", href: "/privacy" }}
           rightLink={{ text: "Terms of Service", href: "/terms" }}
         />
