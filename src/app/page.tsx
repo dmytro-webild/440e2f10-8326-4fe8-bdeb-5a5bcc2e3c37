@@ -6,7 +6,6 @@ import NavbarLayoutFloatingOverlay from "@/components/navbar/NavbarLayoutFloatin
 import HeroSplitDoubleCarousel from "@/components/sections/hero/HeroSplitDoubleCarousel";
 import FeatureBento from "@/components/sections/feature/FeatureBento";
 import MetricCardFourteen from "@/components/sections/metrics/MetricCardFourteen";
-import TeamCardTwo from "@/components/sections/team/TeamCardTwo";
 import TestimonialCardTwo from "@/components/sections/testimonial/TestimonialCardTwo";
 import FaqBase from "@/components/sections/faq/FaqBase";
 import ContactText from "@/components/sections/contact/ContactText";
@@ -30,94 +29,94 @@ export default function WebAgency2Page() {
       <ReactLenis root>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingOverlay
-            brandName="Decka Agency"
+            brandName="ProService"
             navItems={[
               { name: "Services", id: "services" },
               { name: "About", id: "about" },
               { name: "Contact", id: "contact" },
             ]}
-            button={{ text: "Get Started", href: "#contact" }}
+            button={{ text: "Get Quote", href: "#contact" }}
           />
         </div>
         <HeroSplitDoubleCarousel
-          title="Decka: Digital Strategy & Development"
-          description="Transform your brand with cutting-edge web design and development. We craft stunning websites that convert visitors into customers for decka.agency."
-          tag="Award-Winning Agency"
+          title="ProService: Local Professional Solutions"
+          description="We provide expert cleaning, pressure washing, and landscaping services. Elevate your property's curb appeal with our high-performance maintenance team."
+          tag="Top Rated Maintenance"
           tagIcon={Sparkles}
           tagAnimation="slide-up"
           background={{ variant: "canvas-reveal" }}
           buttons={[
-            { text: "Start Project", href: "#contact" },
+            { text: "Get Your Estimate", href: "#contact" },
           ]}
           buttonAnimation="slide-up"
           carouselPosition="right"
           leftCarouselItems={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "UI UX Design" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "UI UX Design" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "UI UX Design" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "Cleaning services" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "Pressure washing" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "Landscaping" },
           ]}
           rightCarouselItems={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "UI UX Design" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp", imageAlt: "UI UX Design" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp?_wi=1", imageAlt: "UI UX Design" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "Cleaning equipment" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp", imageAlt: "Pressure washing tool" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp?_wi=1", imageAlt: "Landscaping tool" },
           ]}
           carouselItemClassName="!aspect-[4/5]"
         />
         <FeatureBento
           title="Our Specialized Services"
-          description="We provide tailored digital solutions designed to accelerate growth for your specific market."
+          description="Tailored care for your residential and commercial properties."
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground={false}
           features={[
-            { title: "Strategic Web Design", description: "High-conversion layouts, Custom brand identity", bentoComponent: "reveal-icon", icon: Sparkles },
-            { title: "Performance Development", description: "Lightning fast load times, SEO optimized codebase", bentoComponent: "reveal-icon", icon: Zap },
-            { title: "Digital Brand Strategy", description: "Market positioning, Audience engagement tactics", bentoComponent: "reveal-icon", icon: Shield },
+            { title: "Professional Cleaning", description: "Deep cleaning, recurring maintenance, sanitation services.", bentoComponent: "reveal-icon", icon: Sparkles },
+            { title: "Pressure Washing", description: "Driveway restoration, deck washing, siding cleaning.", bentoComponent: "reveal-icon", icon: Zap },
+            { title: "Complete Landscaping", description: "Lawn care, garden design, seasonal cleanup.", bentoComponent: "reveal-icon", icon: Shield },
           ]}
         />
         <MetricCardFourteen
-          title="Core Metrics"
+          title="Reliability at a Glance"
           tag="Results"
           metricsAnimation="slide-up"
           useInvertedBackground={true}
           metrics={[
-            { id: "1", value: "100+", description: "Projects completed across global industries" },
-            { id: "2", value: "99%", description: "Satisfaction rate with a client-first approach" },
-            { id: "3", value: "8+", description: "Years of expertise in crafting experiences" },
+            { id: "1", value: "500+", description: "Satisfied residential & commercial clients" },
+            { id: "2", value: "98%", description: "Client satisfaction rating on repeat services" },
+            { id: "3", value: "10+", description: "Years of professional maintenance experience" },
           ]}
         />
         <TestimonialCardTwo
           title="Client Feedback"
-          description="What our partners say about us."
+          description="See what homeowners say about our quality."
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground={true}
           testimonials={[
-            { id: "1", name: "Sarah J.", role: "Founder", testimonial: "Decka Agency transformed our entire digital infrastructure.", icon: Star },
-            { id: "2", name: "Michael T.", role: "CEO", testimonial: "Professional, fast, and highly creative.", icon: Star },
+            { id: "1", name: "Alex R.", role: "Homeowner", testimonial: "The pressure washing result was incredible. Like a new house!", icon: Star },
+            { id: "2", name: "Jessica M.", role: "Office Manager", testimonial: "Reliable and thorough cleaning crew every single week.", icon: Star },
           ]}
         />
         <FaqBase
-          title="Common Questions"
-          description="Everything you need to know about decka.agency."
+          title="Questions & Answers"
+          description="Information about our service process."
           textboxLayout="default"
           faqsAnimation="slide-up"
           useInvertedBackground={false}
           faqs={[
-            { id: "1", title: "How do we get started?", content: "Fill out our contact form and we'll reach out within 24 hours." },
-            { id: "2", title: "What is your process?", content: "We follow a streamlined discovery and design process." },
+            { id: "1", title: "How do I request a quote?", content: "Simply use the form below and we will contact you for a site visit." },
+            { id: "2", title: "Are you licensed/insured?", content: "Yes, our company is fully licensed and insured for your peace of mind." },
           ]}
         />
         <div id="contact" data-section="contact">
           <ContactText
-            text="Ready to build something great at decka.agency?"
+            text="Get started with your service quote today."
             background={{ variant: "gradient-bars" }}
             useInvertedBackground={false}
           />
         </div>
         <FooterCard
-          logoText="Decka Agency"
-          copyrightText="© 2025 | Decka Agency"
+          logoText="ProService"
+          copyrightText="© 2025 | ProService"
         />
       </ReactLenis>
     </ThemeProvider>
