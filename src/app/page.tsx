@@ -29,94 +29,100 @@ export default function WebAgency2Page() {
       <ReactLenis root>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingOverlay
-            brandName="DesignAgency"
+            brandName="Decka Agency"
             navItems={[
-              { name: "Work", id: "services" },
-              { name: "About", id: "about" },
+              { name: "Home", id: "hero" },
+              { name: "Portfolio", id: "portfolio" },
+              { name: "Services", id: "services" },
               { name: "Contact", id: "contact" },
             ]}
-            button={{ text: "Hire Us", href: "#contact" }}
           />
         </div>
-        <HeroSplitDoubleCarousel
-          title="DesignAgency: Crafting Digital Excellence"
-          description="We transform visions into high-performance web experiences. From modern UI design to full-scale digital strategy, we build platforms that captivate and convert."
-          tag="Premium Web Design"
-          tagIcon={Sparkles}
-          tagAnimation="slide-up"
-          background={{ variant: "canvas-reveal" }}
-          buttons={[
-            { text: "Start a Project", href: "#contact" },
-          ]}
-          buttonAnimation="slide-up"
-          carouselPosition="right"
-          leftCarouselItems={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "FreshNest Cleaning Co. Website Interface" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "BlueLine Pressure Washing Branding" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "Design concept" },
-          ]}
-          rightCarouselItems={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "FreshNest UI Detail" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp", imageAlt: "BlueLine UI Detail" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp?_wi=1", imageAlt: "User Experience Design" },
-          ]}
-          carouselItemClassName="!aspect-[4/5]"
-        />
-        <FeatureBento
-          title="Our Design Capabilities"
-          description="Full-stack digital agency services to scale your brand presence."
-          textboxLayout="default"
-          animationType="slide-up"
-          useInvertedBackground={false}
-          features={[
-            { title: "Brand Identity", description: "Crafting unique visual languages and design systems that define modern businesses.", bentoComponent: "reveal-icon", icon: Sparkles },
-            { title: "Web Development", description: "Building fast, responsive, and secure web applications tailored to your specific needs.", bentoComponent: "reveal-icon", icon: Zap },
-            { title: "Digital Strategy", description: "Data-driven consulting to optimize user journey and business performance.", bentoComponent: "reveal-icon", icon: Shield },
-          ]}
-        />
+        <div id="hero" data-section="hero">
+          <HeroSplitDoubleCarousel
+            title="Websites That Help Local Businesses Get More Customers"
+            description="We create modern, conversion-focused websites for local service businesses that improve credibility and turn visitors into loyal clients."
+            tag="Websites Built for Local Businesses"
+            tagIcon={Sparkles}
+            tagAnimation="slide-up"
+            background={{ variant: "canvas-reveal" }}
+            buttons={[
+              { text: "View Portfolio" },
+            ]}
+            buttonAnimation="slide-up"
+            carouselPosition="right"
+            leftCarouselItems={[
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "FreshNest Cleaning Co. Website Interface" },
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "BlueLine Pressure Washing Branding" },
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "Evergreen Landscaping Website" },
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "Peak Home Services Website" },
+            ]}
+            rightCarouselItems={[
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "FreshNest Cleaning Co. Website Interface" },
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "BlueLine Pressure Washing Branding" },
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "Evergreen Landscaping Website" },
+              { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "Peak Home Services Website" },
+            ]}
+            carouselItemClassName="!aspect-[4/5]"
+          />
+        </div>
+        <div id="services" data-section="services">
+          <FeatureBento
+            title="Our Digital Services"
+            description="We build sites that work as hard as your business does."
+            textboxLayout="default"
+            animationType="slide-up"
+            useInvertedBackground={false}
+            features={[
+              { title: "Conversion Design", description: "High-impact UI and UX layouts tailored to convert local leads into customers.", bentoComponent: "reveal-icon", icon: Sparkles },
+              { title: "Responsive Web Dev", description: "Pixel-perfect builds that look incredible on every mobile device.", bentoComponent: "reveal-icon", icon: Zap },
+              { title: "SEO & Speed", description: "Fast-loading, optimized infrastructure to rank your local business higher.", bentoComponent: "reveal-icon", icon: Shield },
+            ]}
+          />
+        </div>
         <MetricCardFourteen
-          title="Our Track Record"
-          tag="Proven Results"
+          title="Proven Results"
+          tag="Track Record"
           metricsAnimation="slide-up"
           useInvertedBackground={true}
           metrics={[
-            { id: "1", value: "150+", description: "Successful brand transformations" },
-            { id: "2", value: "99%", description: "Client retention for long-term growth" },
-            { id: "3", value: "8+", description: "Years of digital design leadership" },
+            { id: "1", value: "150+", description: "Local businesses transformed" },
+            { id: "2", value: "99%", description: "Client satisfaction rating" },
+            { id: "3", value: "8+", description: "Years of expert service" },
           ]}
         />
         <TestimonialCardTwo
-          title="Client Success"
-          description="Hear what our partners say about our work."
+          title="Client Success Stories"
+          description="See how our websites have impacted local service companies."
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground={true}
           testimonials={[
-            { id: "1", name: "Founder", role: "FreshNest Cleaning Co.", testimonial: "The digital transformation has revolutionized how our customers engage with us.", icon: Star },
-            { id: "2", name: "Director", role: "BlueLine Pressure Washing", testimonial: "Professional, creative, and highly strategic. A game-changer for our market.", icon: Star },
+            { id: "1", name: "Founder", role: "FreshNest Cleaning Co.", testimonial: "Our new site has increased leads by 40% in just two months.", icon: Star },
+            { id: "2", name: "Director", role: "BlueLine Pressure Washing", testimonial: "The site looks amazing and actually brings in local calls.", icon: Star },
           ]}
         />
         <FaqBase
           title="Frequently Asked Questions"
-          description="Everything you need to know about partnering with our agency."
+          description="Common questions about building a website for your business."
           textboxLayout="default"
           faqsAnimation="slide-up"
           useInvertedBackground={false}
           faqs={[
-            { id: "1", title: "How do we begin a project?", content: "Simply reach out via our contact form to schedule an initial discovery call." },
-            { id: "2", title: "Do you offer ongoing support?", content: "We provide comprehensive post-launch support and optimization services to keep your platform evolving." },
+            { id: "1", title: "How do we get started?", content: "Fill out our contact form and we'll schedule a discovery chat." },
+            { id: "2", title: "Do you handle ongoing maintenance?", content: "Yes, we provide full support to keep your site fast and secure." },
           ]}
         />
         <div id="contact" data-section="contact">
           <ContactText
-            text="Ready to transform your digital presence?"
+            text="Ready to grow your customer base?"
             background={{ variant: "gradient-bars" }}
             useInvertedBackground={false}
           />
         </div>
         <FooterCard
-          logoText="DesignAgency"
-          copyrightText="© 2025 | DesignAgency"
+          logoText="Decka Agency"
+          copyrightText="© 2025 | Decka Agency"
         />
       </ReactLenis>
     </ThemeProvider>
