@@ -29,94 +29,94 @@ export default function WebAgency2Page() {
       <ReactLenis root>
         <div id="nav" data-section="nav">
           <NavbarLayoutFloatingOverlay
-            brandName="ProService"
+            brandName="DesignAgency"
             navItems={[
-              { name: "Services", id: "services" },
+              { name: "Work", id: "services" },
               { name: "About", id: "about" },
               { name: "Contact", id: "contact" },
             ]}
-            button={{ text: "Get Quote", href: "#contact" }}
+            button={{ text: "Hire Us", href: "#contact" }}
           />
         </div>
         <HeroSplitDoubleCarousel
-          title="ProService: Local Professional Solutions"
-          description="We provide expert cleaning, pressure washing, and landscaping services. Elevate your property's curb appeal with our high-performance maintenance team."
-          tag="Top Rated Maintenance"
+          title="DesignAgency: Crafting Digital Excellence"
+          description="We transform visions into high-performance web experiences. From modern UI design to full-scale digital strategy, we build platforms that captivate and convert."
+          tag="Premium Web Design"
           tagIcon={Sparkles}
           tagAnimation="slide-up"
           background={{ variant: "canvas-reveal" }}
           buttons={[
-            { text: "Get Your Estimate", href: "#contact" },
+            { text: "Start a Project", href: "#contact" },
           ]}
           buttonAnimation="slide-up"
           carouselPosition="right"
           leftCarouselItems={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "Cleaning services" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "Pressure washing" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "Landscaping" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-1.webp?_wi=1", imageAlt: "FreshNest Cleaning Co. Website Interface" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-4.webp", imageAlt: "BlueLine Pressure Washing Branding" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-6.webp", imageAlt: "Design concept" },
           ]}
           rightCarouselItems={[
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "Cleaning equipment" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp", imageAlt: "Pressure washing tool" },
-            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp?_wi=1", imageAlt: "Landscaping tool" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-2.webp?_wi=1", imageAlt: "FreshNest UI Detail" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-5.webp", imageAlt: "BlueLine UI Detail" },
+            { imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/templates/web-agency-2/shot-3.webp?_wi=1", imageAlt: "User Experience Design" },
           ]}
           carouselItemClassName="!aspect-[4/5]"
         />
         <FeatureBento
-          title="Our Specialized Services"
-          description="Tailored care for your residential and commercial properties."
+          title="Our Design Capabilities"
+          description="Full-stack digital agency services to scale your brand presence."
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground={false}
           features={[
-            { title: "Professional Cleaning", description: "Deep cleaning, recurring maintenance, sanitation services.", bentoComponent: "reveal-icon", icon: Sparkles },
-            { title: "Pressure Washing", description: "Driveway restoration, deck washing, siding cleaning.", bentoComponent: "reveal-icon", icon: Zap },
-            { title: "Complete Landscaping", description: "Lawn care, garden design, seasonal cleanup.", bentoComponent: "reveal-icon", icon: Shield },
+            { title: "Brand Identity", description: "Crafting unique visual languages and design systems that define modern businesses.", bentoComponent: "reveal-icon", icon: Sparkles },
+            { title: "Web Development", description: "Building fast, responsive, and secure web applications tailored to your specific needs.", bentoComponent: "reveal-icon", icon: Zap },
+            { title: "Digital Strategy", description: "Data-driven consulting to optimize user journey and business performance.", bentoComponent: "reveal-icon", icon: Shield },
           ]}
         />
         <MetricCardFourteen
-          title="Reliability at a Glance"
-          tag="Results"
+          title="Our Track Record"
+          tag="Proven Results"
           metricsAnimation="slide-up"
           useInvertedBackground={true}
           metrics={[
-            { id: "1", value: "500+", description: "Satisfied residential & commercial clients" },
-            { id: "2", value: "98%", description: "Client satisfaction rating on repeat services" },
-            { id: "3", value: "10+", description: "Years of professional maintenance experience" },
+            { id: "1", value: "150+", description: "Successful brand transformations" },
+            { id: "2", value: "99%", description: "Client retention for long-term growth" },
+            { id: "3", value: "8+", description: "Years of digital design leadership" },
           ]}
         />
         <TestimonialCardTwo
-          title="Client Feedback"
-          description="See what homeowners say about our quality."
+          title="Client Success"
+          description="Hear what our partners say about our work."
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground={true}
           testimonials={[
-            { id: "1", name: "Alex R.", role: "Homeowner", testimonial: "The pressure washing result was incredible. Like a new house!", icon: Star },
-            { id: "2", name: "Jessica M.", role: "Office Manager", testimonial: "Reliable and thorough cleaning crew every single week.", icon: Star },
+            { id: "1", name: "Founder", role: "FreshNest Cleaning Co.", testimonial: "The digital transformation has revolutionized how our customers engage with us.", icon: Star },
+            { id: "2", name: "Director", role: "BlueLine Pressure Washing", testimonial: "Professional, creative, and highly strategic. A game-changer for our market.", icon: Star },
           ]}
         />
         <FaqBase
-          title="Questions & Answers"
-          description="Information about our service process."
+          title="Frequently Asked Questions"
+          description="Everything you need to know about partnering with our agency."
           textboxLayout="default"
           faqsAnimation="slide-up"
           useInvertedBackground={false}
           faqs={[
-            { id: "1", title: "How do I request a quote?", content: "Simply use the form below and we will contact you for a site visit." },
-            { id: "2", title: "Are you licensed/insured?", content: "Yes, our company is fully licensed and insured for your peace of mind." },
+            { id: "1", title: "How do we begin a project?", content: "Simply reach out via our contact form to schedule an initial discovery call." },
+            { id: "2", title: "Do you offer ongoing support?", content: "We provide comprehensive post-launch support and optimization services to keep your platform evolving." },
           ]}
         />
         <div id="contact" data-section="contact">
           <ContactText
-            text="Get started with your service quote today."
+            text="Ready to transform your digital presence?"
             background={{ variant: "gradient-bars" }}
             useInvertedBackground={false}
           />
         </div>
         <FooterCard
-          logoText="ProService"
-          copyrightText="© 2025 | ProService"
+          logoText="DesignAgency"
+          copyrightText="© 2025 | DesignAgency"
         />
       </ReactLenis>
     </ThemeProvider>
